@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+
+
+<div class="formInput" *ngFor="let input of inputs.controls; index as i">
+  <input [formControl]="getControl(i)">
+</div>
+
+<button (click)="getValues()">get values</button>
+<hr>
+
+<p *ngFor="let val of values">{{val}}</p>
